@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgba(70, 93, 221, 0.774);
+            font: normal 15pt Arial;
+        }
+        header {
+            color: white;
+            text-align: center;
+        }
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgb(rgb(0, 0, 0), green, blue);
+        }
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+        div {
+            text-align: center;
+            padding: 8px;
+        }
+        #imagem{
+            border-radius: 90%;
+            width: 45%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+    </header>
+    <section>
+        <div id="msg">
+            Aqui vai aparecer a mensagem ...
+        </div>
+        <div id="foto">
+            <img id="imagem" src="https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg" alt="Foto do dia">
+        </div>
+    </section>
+    <footer>
+        <p> &copy; Curso em Vídeo</p>
+        <script>
+            var msg = window.document.getElementById('msg')
+            var img = window.document.getElementById('imagem')
+            var data = new Date() //No outro COdigo da aula, ele usou a hora, mas em baixo foi um pouco diferente (Verificar o que foi)
+            var hora = 20
+            msg.innerHTML = `Agora são ${hora} horas.`
+            if (hora >= 0 && hora <12){
+                //Bom Dia
+                img.src = 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg' //falta o link
+                document.body.style.background = '#e2cd9f'
+            } else if (hora >= 12 && hora <= 18) {
+                //Boa Tarde
+                img.src = 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg' //falta o link
+                document.body.style.background = '#b9846f'
+            } else {
+                img.src = 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg' //falta o link
+                document.body.style.background = '#515154'
+            }
+        </script>
+    </footer>
+</body>
+</html>

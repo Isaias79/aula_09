@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Nacionalidade</title>
+</head>
+<style>
+    input.entrada{
+        background: rgb(217, 224, 217);
+        text-align: center;
+        color:rgb(236, 9, 66);
+    }
+    div.txt{
+        margin-top: 20px;
+    }   
+
+</style>
+<body>
+     <!-- <input type="submit" value="Submit" onclick="submit()"> -->
+    <h1>Teste para saber se você é brasileiro</h1>
+    <strong>Digite seu país: </strong><input type="text" name="submit" id="submit"> 
+    <input type="button" value="Submit" onclick="envia()">
+    <div class="txt">
+
+    </div>
+    <script>
+        function envia(){
+            var nac = window.document.querySelector('input#submit')
+            var txt1 = window.document.querySelector('div.txt')
+ 
+            if ((nac.value) == 'brasil' || (nac.value) == 'Brasi'){
+                txt1.innerHTML = `Você é Brasileiro, nasceu no ${nac.value}`
+                
+            }else{
+                txt1.innerHTML = `Você não é Brasileiro, nasceu no ${nac.value}`
+            }
+            
+        }
+    </script>
+</body>
+</html>
